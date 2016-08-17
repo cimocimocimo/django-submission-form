@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Demo Forms</h1>
+
+  <ul>
+    {% for form in forms %}
+      <li>
+        <a href="{{ form.url }}">{{ form.name }}</a>
+        <br />
+        url: {{ form.url }}
+        <br />
+        label: {{ form.label }}
+        <br />
+        file_path: {{ form.file_path }}
+        <br />
+        python_path: {{ form.python_path }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
